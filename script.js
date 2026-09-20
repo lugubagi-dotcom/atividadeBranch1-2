@@ -1,6 +1,7 @@
 const input = document.getElementById("task-input");
 const addBtn = document.getElementById("add-btn");
 const taskList = document.getElementById("task-list");
+const taskCount = document.getElementById("task-count");
 
 // Bug corrigido: o botão "Adicionar" não tinha nenhuma ação associada.
 addBtn.addEventListener("click", () => {

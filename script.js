@@ -11,3 +11,8 @@ addBtn.addEventListener("click", () => {
   taskList.appendChild(li);
   input.value = ""; // bug corrigido: campo não era limpo após adicionar
 });
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});

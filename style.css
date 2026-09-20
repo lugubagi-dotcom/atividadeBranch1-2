@@ -78,3 +78,29 @@ footer {
     line-height: 1.4;
   }
 }
+
+#theme-toggle {
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background-color: #1a1d23;
+  color: #eee;
+}
+
+body.dark-mode main {
+  background: #2a2e35;
+  color: #eee;
+}
+
+body.dark-mode #task-input {
+  background: #3a3f47;
+  color: #eee;
+  border-color: #555;
+}

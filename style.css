@@ -78,3 +78,8 @@ footer {
     line-height: 1.4;
   }
 }
+
+#task-list li.completed {
+  text-decoration: line-through;
+  color: #888;
+}

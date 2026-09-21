@@ -8,6 +8,12 @@ addBtn.addEventListener("click", () => {
 
   const li = document.createElement("li");
   li.textContent = input.value;
+
+  const editBtn = document.createElement("button");
+  editBtn.textContent = "✏️";
+  editBtn.className = "edit-btn";
+  li.appendChild(editBtn);
+
   taskList.appendChild(li);
   input.value = ""; // bug corrigido: campo não era limpo após adicionar
 });

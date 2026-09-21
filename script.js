@@ -18,6 +18,13 @@ addBtn.addEventListener("click", () => {
   const editBtn = document.createElement("button");
   editBtn.textContent = "✏️";
   editBtn.className = "edit-btn";
+  editBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const novoTexto = prompt("Editar tarefa:", li.firstChild.textContent);
+    if (novoTexto !== null && novoTexto.trim() !== "") {
+      li.firstChild.textContent = novoTexto;
+    }
+  });
   li.appendChild(editBtn);
 
   taskList.appendChild(li);

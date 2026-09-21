@@ -83,3 +83,24 @@ footer {
   text-decoration: line-through;
   color: #888;
 }
+
+.filters {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.filter-btn.active {
+  background: #2c3e50;
+  color: #fff;
+}

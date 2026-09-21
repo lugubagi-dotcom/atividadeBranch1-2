@@ -12,3 +12,18 @@ addBtn.addEventListener("click", () => {
   taskList.appendChild(li);
   input.value = ""; // bug corrigido: campo não era limpo após adicionar
 });
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+    document.querySelectorAll("#task-list li").forEach((li) => {
+      const isCompleted = li.classList.contains("completed");
+      if (filter === "all") li.style.display = "";
+      else if (filter === "pending") li.style.display = isCompleted ? "none" : "";
+      else if (filter === "completed") li.style.display = isCompleted ? "" : "none";
+    });
+  });
+});
